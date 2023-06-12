@@ -33,6 +33,7 @@ CUDA & TensorRT solution for [BEVFusion](https://arxiv.org/abs/2205.13542) infer
 - **PTQ**: Quantization solutions for [mmdet3d/spconv](https://github.com/mit-han-lab/bevfusion/tree/main/mmdet3d/ops/spconv), Easy to understand.
 
 ## CUDA CenterPoint
+3d object detection and tracking
 CUDA & TensorRT solution for [CenterPoint](https://arxiv.org/abs/2006.11275) inference, including:
 - **Preprocess**: Voxelization with CUDA kernel
 - **Encoder**: 3D backbone with NV spconv-scn and onnx export solution.
@@ -42,6 +43,7 @@ CUDA & TensorRT solution for [CenterPoint](https://arxiv.org/abs/2006.11275) inf
 - **QAT**: Quantization solutions for [traveller59/spconv](https://github.com/traveller59/spconv), Easy to understand.
 
 ## CUDA PointPillars
+object detection
 CUDA & TensorRT solution for [pointpillars](https://arxiv.org/abs/1812.05784) inference, including:
 - **Preprocess**: Voxelization & Feature Extending with CUDA kernel
 - **Detector**: 2.5D backbone with TensorRT and onnx export solution.
