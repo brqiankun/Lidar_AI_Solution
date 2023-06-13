@@ -80,7 +80,8 @@ Task load_task(const string& name, spconv::Precision precision) {
         "python tool/compare.py workspace/bevfusion/infer.zyx.dense "
         "workspace/bevfusion/output.zyx.dense --detail";
   } else if (name == "centerpointZYX") {
-    task.engine = spconv::load_engine_from_onnx("centerpoint/centerpoint.scn.PTQ.onnx", precision);
+    // task.engine = spconv::load_engine_from_onnx("centerpoint/centerpoint.scn.PTQ.onnx", precision);
+    task.engine = spconv::load_engine_from_onnx("scn.nuscenes_br.onnx");
     task.features = spconv::Tensor::load("centerpoint/in_features.torch.fp16.tensor");
     task.indices = spconv::Tensor::load("centerpoint/in_indices_zyx.torch.int32.tensor");
     task.grid_size = {41, 1440, 1440};

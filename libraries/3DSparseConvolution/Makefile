@@ -19,6 +19,7 @@
 # FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 # DEALINGS IN THE SOFTWARE.
 
+CUDA_HOME := /usr/local/cuda-11.7
 optimize  := -O3
 cc        := g++
 stdcpp    := c++11

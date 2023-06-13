@@ -34,6 +34,8 @@ $ cp scn.nuscenes.onnx path/to/3DSparseConvolution/workspace/
 ```
 
 3. ## Compile && Run
+
+make fp16 -j 出错， libprotobuf-dev版本出错
 - Build and run test
 ```
 $ sudo apt-get install libprotobuf-dev
@@ -94,3 +96,9 @@ To verify result:
   - SpatiallySparseConvolution and SubmanifoldSparseConvolution.
 - Supported properties of SparseConvolution:
   - activation, kernel_size, dilation, stride, padding, rulebook, subm, output_bound, precision and output_precision.
+
+### spconv 
+Can other networks that use Spconv, such as VoxelRCNN, also use NV spconv scn for TensorRT acceleration？<br>
+It is building the execution graph by ONNX. So you need to refer to the ONNX export script provided [here](https://github.com/NVIDIA-AI-IOT/Lidar_AI_Solution/blob/master/CUDA-BEVFusion/qat/export-scn.py), and then You can use it anywhere.
+
+算子融合spconv bn relu进行融合？？？
